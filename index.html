@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>day11 homework</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/search1.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/sp_image.css">
+</head>
+<body class="tabsch_image">
+<div id="#content" class="pack_group">
+    <div id="#main_pack" class="main_pack">
+        <div class="sp_image section">
+            <div class="photowall">
+                <ul class="lst_img2">
+                    <script type="text/template" id="singleImage">
+                        <li style="margin:4px">
+                            <div class="img_area">
+                                <a href="{{ PCLink }}" class="thumb" title="{{{ fullTitle }}}">
+                                    <img src="{{ sThumb }}" height="180" alt="{{ section_name }}">
+                                    <span class="img_border"></span>
+                                    <span class="thum_v"></span>
+                                    <span class="data_img">
+                                        <span class="data_bg"></span>
+                                        <span class="data_txt">
+                                            <em class="tit">{{{ sTitle }}}</em>
+                                            <span class="size">{{ sThumbSize }}</span>
+                                        </span>
+			                        </span>
+                                </a>
+                            </div>
+                        </li>
+                    </script>
+                </ul>
+            </div>
+            <div class="more_img">
+                <a href="javascript:void(0)" class="btn_more">
+                    <span class="spimg ico_arr">이미지 더보기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="static/vendor/jquery/dist/jquery.min.js"></script>
+<script src="static/vendor/mustache.js/mustache.min.js"></script>
+<script src="static/hunyong.song-1.0.0.js"></script>
+<script>
+    var entity = new nts.model.ImageSearchEntity();
+    var view = new nts.view.ImageSearchList('.lst_img2');
+    var controller = new nts.controller.ImageSearchController(entity, view);
+</script>
+</body>
+</html>
