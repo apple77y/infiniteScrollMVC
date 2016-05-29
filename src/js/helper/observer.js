@@ -1,0 +1,42 @@
+/**
+ * Observer 생성자 정의
+ * @returns {*}
+ * @constructor
+ */
+nts.helper.Observer = function () {
+    this._eventHandler = $(this);
+};
+
+/**
+ * Observer 객체의 프로토타입 정의
+ */
+nts.helper.Observer.prototype = {
+
+    /**
+     * 이벤트 핸들러에 커스텀 이벤트를 저장
+     * @param {string} event 커스텀 이벤트 명
+     * @param {function} callback 콜백 함수
+     * @public
+     */
+    subscribe: function (event, callback) {
+        this._eventHandler.on(event, callback);
+    },
+
+    /**
+     * 이벤트 핸들러에 커스텀 이벤트를 삭제
+     * @param {string} event 커스텀 이벤트 명
+     * @public
+     */
+    unSubscribe: function (event) {
+        this._eventHandler.off(event);
+    },
+
+    /**
+     * 이벤트 핸들러에 저장되어있는 이벤트를 실행
+     * @param {string} event 커스텀 이벤트 명
+     * @public
+     */
+    publish: function (event) {
+        this._eventHandler.trigger(event);
+    }
+};
