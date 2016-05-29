@@ -1,0 +1,17 @@
+{
+  "name": "hunyong.song",
+  "description": "day11 homework",
+  "main": "index.html",
+  "authors": [
+    "hunyong.song"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "imageSearch"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "mustache.js": "mustache#^2.2.1"
+  }
+}

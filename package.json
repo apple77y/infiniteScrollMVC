@@ -1,0 +1,40 @@
+{
+  "name": "hunyong.song",
+  "version": "1.0.0",
+  "description": "infinite scroll auto ajax",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "bower install && npm run build",
+    "build": "grunt"
+  },
+  "author": {
+    "name": "hunyong.song",
+    "email": "apple77y@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apple77y/infiniteScroll"
+  },
+  "bugs": {
+    "email" : "apple77y@gmail.com",
+    "url" : "https://github.com/apple77y/infiniteScroll/issues"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-jsdoc": "^2.0.0",
+    "jaguarjs-jsdoc": "^0.0.1",
+    "jshint-stylish": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "keywords": [
+    "imageSearch"
+  ],
+  "license": "ISC"
+}
